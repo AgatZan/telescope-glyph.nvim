@@ -51,11 +51,11 @@ Extension Scheme
 | name|type | Description | Default |
 | --- |---|---|---|
 | action |fun( glyph: Glyph ):nil | Function that will be called after choosing glyph | yank to reg |
-| base_glyph | boolean | Insert [base glyph](#glyph) | true |
+| base_glyph | boolean | Insert [base glyphs](#glyph) | true |
 | base_emoji | boolean | Insert [base_emoji](https://github.com/xiyaowong/telescope-emoji.nvim/blob/master/lua/telescope-emoji/init.lua) | false |
 | glyphs | Glyph[] | Your glyphs | nil |
  
-**It's optional.**
+**It's optional.**  
 by default
 ```lua
 telescope.setup {
@@ -76,6 +76,55 @@ telescope.setup {
     },
 }
 ```
+
+## <a name="glyph"></a> Base glyphs
+```lua
+{
+		name = "Em dash",
+		value = "—”",
+		category = "Unicode: General Punctuation",
+		description = "U+2014",
+	},
+
+	{
+		name = "English open quot",
+		value = "‘",
+		category = "Unicode: General Punctuation",
+		description = "U+2018",
+	},
+	{
+		name = "English close quot",
+		value = "’™",
+		category = "Unicode: General Punctuation",
+		description = "U+2019",
+	},
+
+	{
+		name = "Russian open quot",
+		value = "«",
+		category = "Unicode: General Punctuation",
+		description = "U+2019",
+	},
+	{
+		name = "Russian close quot",
+		value = "»",
+		category = "Unicode: General Punctuation",
+		description = "U+2019",
+	},
+	{
+		name = "Light diagonal upper right to lower left",
+		value = "╱",
+		category = "Unicode: Box Drawing",
+		description = "U+2571",
+	},
+	{
+		name = "Light Diagonal Upper Left To Lower right",
+		value = "╲",
+		category = "Unicode: Box Drawing",
+		description = "U+2572",
+	}
+```
+
 ## TODO:
 - [ ] Picker agnostic
 - [ ] Thinking about table compilation
