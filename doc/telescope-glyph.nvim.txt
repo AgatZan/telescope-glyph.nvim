@@ -60,10 +60,19 @@ CONFIGURAION          *telescope-glyph.nvim-telescope-glyph.nvim-configuraion*
 
 TYPES ~
 
-Glyph |= &#009 name: string &#009 value: string Inserted value &#009
-description: string Extension Scheme | name|type | Description | Default | |
-— |—|—|—| | action |fun( glyph: Glyph ):nil | Function that will be
-called after choosing glyph | yank to reg | | base_glyph | boolean | Insert
+`Glyph |= name: string value: string Inserted value description: string`
+
+>lua
+    {
+     name = "Glyph name",
+     value = "",
+     description = "C lang icon",
+    }
+<
+
+Extension Scheme | name|type | Description | Default | | — |—|—|—| |
+action |fun( glyph: Glyph ):nil | Function that will be called after choosing
+glyph | yank to reg | | base_glyph | boolean | Insert
 |telescope-glyph.nvim-base-glyph| | true | | base_emoji | boolean | Insert
 base_emoji
 <https://github.com/xiyaowong/telescope-emoji.nvim/blob/master/lua/telescope-emoji/init.lua>
@@ -85,7 +94,7 @@ base_emoji
                 end,
                 base_glyph = true,
                 base_emoji = false,
-                glyphs = nil
+                glyphs = {},
             },
         },
     }
