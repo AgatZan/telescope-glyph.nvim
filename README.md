@@ -21,7 +21,7 @@ use('AgatZan/telescope-glyph.nvim')
 ```
 Via [lazy.nvim](https://github.com/folke/lazy.nvim)
 ```lua
-return { 'AgatZan/telescope-glyph.nvim' } --lazy
+return { 'AgatZan/telescope-glyph.nvim' } 
 ```
 Add following to your Telescope config
 ```
@@ -36,10 +36,10 @@ require('telescope').load_extension('glyph')
 ## Configuraion
 
 ### Types
-Glyph |=
-    name: string
-    value: string Inserted value
-    description: string
+Glyph |=  
+&#009 name: string  
+&#009 value: string Inserted value  
+&#009 description: string  
 Extension Scheme
 | name|type | Description | Default |
 | --- |---|---|---|

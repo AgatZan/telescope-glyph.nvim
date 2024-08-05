@@ -79,13 +79,13 @@ return require("telescope").register_extension({
 		action = config.action or action
 		if config.base_glyphs ~= false then
 			---@module "teleglyphs.glyphs"
-			glyphs = require("teleglyphs.glyphs")
+			glyphs = require("telescope-glyph.glyphs")
 		end
 		if config.base_emoji ~= false then
 			glyphs = vim.tbl_deep_extend(
 				"force",
 				glyphs,
-				require("teleglyphs.emoji")
+				require("telescope-glyph.emoji")
 			)
 		end
 		if config.glyphs ~= nil then
