@@ -36,10 +36,17 @@ require('telescope').load_extension('glyph')
 ## Configuraion
 
 ### Types
-Glyph |=  
-&#009 name: string  
-&#009 value: string Inserted value  
-&#009 description: string  
+`Glyph |=  
+  name: string  
+  value: string Inserted value  
+  description: string`
+```lua
+{
+ name = "Glyph name",
+ value = "",
+ description = "C lang icon",
+}
+```
 Extension Scheme
 | name|type | Description | Default |
 | --- |---|---|---|
@@ -64,7 +71,7 @@ telescope.setup {
             end,
             base_glyph = true,
             base_emoji = false,
-            glyphs = nil
+            glyphs = {},
         },
     },
 }
